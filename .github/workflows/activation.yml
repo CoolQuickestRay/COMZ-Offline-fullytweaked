@@ -6,9 +6,9 @@ jobs:
     steps:
       - name: Request manual activation file
         id: getManualLicenseFile
-        uses: game-ci/unity-request-activation-file@v2.2.0
+        uses: game-ci/unity-request-activation-file@v2
       - name: Expose as artifact
-        uses: actions/upload-artifact@v2.2.0
+        uses: actions/upload-artifact@v4
         with:
           name: activation-file
           path: ${{ steps.getManualLicenseFile.outputs.filePath }}
