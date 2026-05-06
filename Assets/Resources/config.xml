@@ -7,25 +7,25 @@
   <Global avatar_hpBuyPrice_a="1.50344" avatar_hpBuyPrice_b="1" avatar_hpBuyPrice_k="1.2" />
 
   <Avatars>
-    <Avatar name="Human" damageInitial="10" damageFinal="100" hpInitial="150" hpFinal="2000" speedInitial="7" speedFinal="9" isCrystalBuy ="0" unlockDay="0" price="400" hpWeight="1" hpPriceWeight="1" />
+    <Avatar name="Human" damageInitial="10" damageFinal="100" hpInitial="330" hpFinal="2000" speedInitial="7" speedFinal="9" isCrystalBuy ="0" unlockDay="0" price="400" hpWeight="1" hpPriceWeight="1" />
     <Avatar name="Worker" damageInitial="28" damageFinal="110" hpInitial="520" hpFinal="2200" speedInitial="7" speedFinal="9" isCrystalBuy ="0" unlockDay="0" price="30000" hpWeight="1.1" hpPriceWeight="1.1" />
     <Avatar name="Nerd" damageInitial="34" damageFinal="120" hpInitial="850" hpFinal="2300" speedInitial="8" speedFinal="10" isCrystalBuy ="0" unlockDay="5" price="40000" hpWeight="1.15" hpPriceWeight="1.15" />
     <Avatar name="Doctor" damageInitial="70" damageFinal="140" hpInitial="1500" hpFinal="2500" speedInitial="8" speedFinal="10" isCrystalBuy ="0" unlockDay="9" price="100000" hpWeight="1.25" hpPriceWeight="1.25" />
-    <Avatar name="Cowboy" damageInitial="180" damageFinal="210" hpInitial="2200" hpFinal="2600" speedInitial="9" speedFinal="11" isCrystalBuy ="0" unlockDay="0" price="200000" hpWeight="1.3" hpPriceWeight="1.3" />
+    <Avatar name="Cowboy" damageInitial="180" damageFinal="210" hpInitial="2200" hpFinal="2600" speedInitial="9" speedFinal="11" isCrystalBuy ="0" unlockDay="12" price="200000" hpWeight="1.3" hpPriceWeight="1.3" />
     <Avatar name="Swat" damageInitial="95" damageFinal="190" hpInitial="1660" hpFinal="2700" speedInitial="8" speedFinal="10" isCrystalBuy ="0" unlockDay="12" price="120000" hpWeight="1.35" hpPriceWeight="1.35" />
     <Avatar name="Marine" damageInitial="150" damageFinal="240" hpInitial="1780" hpFinal="2800" speedInitial="9" speedFinal="11" isCrystalBuy ="0" unlockDay="16" price="250000" hpWeight="1.4" hpPriceWeight="1.4" />
-    <Avatar name="EnegyArmor" damageInitial="300" damageFinal="300" hpInitial="3500" hpFinal="3800" speedInitial="13" speedFinal="13" isCrystalBuy ="1" unlockDay="0" price="350000" hpWeight="1.9" hpPriceWeight="1.9" />
-    <Avatar name="Pirate" damageInitial="220" damageFinal="240" hpInitial="2800" hpFinal="3200" speedInitial="9" speedFinal="11" isCrystalBuy ="0" unlockDay="0" price="500000" hpWeight="1.6" hpPriceWeight="1.6" />
+    <Avatar name="EnegyArmor" damageInitial="300" damageFinal="300" hpInitial="3500" hpFinal="3800" speedInitial="13" speedFinal="13" isCrystalBuy ="0" unlockDay="15" price="350000" hpWeight="1.9" hpPriceWeight="1.9" />
+    <Avatar name="Pirate" damageInitial="220" damageFinal="240" hpInitial="2800" hpFinal="3200" speedInitial="9" speedFinal="11" isCrystalBuy ="0" unlockDay="22" price="500000" hpWeight="1.6" hpPriceWeight="1.6" />
     <Avatar name="Ninja" damageInitial="180" damageFinal="210" hpInitial="2200" hpFinal="3000" speedInitial="10" speedFinal="13" isCrystalBuy ="0" unlockDay="21" price="400000" hpWeight="1.5" hpPriceWeight="1.5" />
-    <Avatar name="Pastor" damageInitial="230" damageFinal="250" hpInitial="3000" hpFinal="3400" speedInitial="11" speedFinal="11" isCrystalBuy ="0" unlockDay="0" price="600000" hpWeight="1.7" hpPriceWeight="1.7" />
-    <Avatar name="Eskimo" damageInitial="270" damageFinal="270" hpInitial="3600" hpFinal="3600" speedInitial="11" speedFinal="12" isCrystalBuy ="0" unlockDay="0" price="650000" hpWeight="1.8" hpPriceWeight="1.8" />
-    <Avatar name="Evil" damageInitial="270" damageFinal="290" hpInitial="3500" hpFinal="3900" speedInitial="12" speedFinal="12" isCrystalBuy ="0" unlockDay="0" price="650000" hpWeight="1.95" hpPriceWeight="1.95" />
-    <Avatar name="Hunter" damageInitial="170" damageFinal="200" hpInitial="2800" hpFinal="2800" speedInitial="11" speedFinal="11" isCrystalBuy ="0" unlockDay="0" price="700000" hpWeight="2.1" hpPriceWeight="2.1" />
+    <Avatar name="Pastor" damageInitial="230" damageFinal="250" hpInitial="3000" hpFinal="3400" speedInitial="11" speedFinal="11" isCrystalBuy ="0" unlockDay="24" price="600000" hpWeight="1.7" hpPriceWeight="1.7" />
+    <Avatar name="Eskimo" damageInitial="270" damageFinal="270" hpInitial="3600" hpFinal="3600" speedInitial="11" speedFinal="12" isCrystalBuy ="0" unlockDay="25" price="650000" hpWeight="1.8" hpPriceWeight="1.8" />
+    <Avatar name="Evil" damageInitial="270" damageFinal="290" hpInitial="3500" hpFinal="3900" speedInitial="12" speedFinal="12" isCrystalBuy ="0" unlockDay="27" price="650000" hpWeight="1.95" hpPriceWeight="1.95" />
+    <Avatar name="Hunter" damageInitial="170" damageFinal="200" hpInitial="2800" hpFinal="2800" speedInitial="11" speedFinal="11" isCrystalBuy ="0" unlockDay="29" price="700000" hpWeight="2.1" hpPriceWeight="2.1" />
     <Avatar name="HumanPixel" damageInitial="15" damageFinal="150" hpInitial="320" hpFinal="2200" speedInitial="7" speedFinal="9" isCrystalBuy ="0" unlockDay="2" price="3500" hpWeight="1.4" hpPriceWeight="1.4" />
-    <Avatar name="LanboPixel" damageInitial="280" damageFinal="280" hpInitial="4000" hpFinal="4000" speedInitial="12" speedFinal="12" isCrystalBuy ="0" unlockDay="0" price="750000" hpWeight="2" hpPriceWeight="2" />
-    <Avatar name="TechSilver" damageInitial="290" damageFinal="290" hpInitial="4800" hpFinal="4800" speedInitial="12" speedFinal="12" isCrystalBuy ="0" unlockDay="0" price="750000" hpWeight="2.4" hpPriceWeight="2.4" />
-    <Avatar name="TechGold" damageInitial="350" damageFinal="350" hpInitial="5500" hpFinal="5500" speedInitial="13" speedFinal="13" isCrystalBuy ="0" unlockDay="0" price="1000000" hpWeight="2.75" hpPriceWeight="2.75" />
-    <Avatar name="Mike" damageInitial="250" damageFinal="300" hpInitial="3500" hpFinal="4500" speedInitial="11" speedFinal="12" isCrystalBuy ="0" unlockDay="0" price="750000" hpWeight="2.2" hpPriceWeight="2.2" />
+    <Avatar name="LanboPixel" damageInitial="280" damageFinal="280" hpInitial="4000" hpFinal="4000" speedInitial="12" speedFinal="12" isCrystalBuy ="0" unlockDay="30" price="750000" hpWeight="2" hpPriceWeight="2" />
+    <Avatar name="TechSilver" damageInitial="290" damageFinal="290" hpInitial="4800" hpFinal="4800" speedInitial="12" speedFinal="12" isCrystalBuy ="0" unlockDay="30" price="750000" hpWeight="2.4" hpPriceWeight="2.4" />
+    <Avatar name="TechGold" damageInitial="350" damageFinal="350" hpInitial="5500" hpFinal="5500" speedInitial="13" speedFinal="13" isCrystalBuy ="0" unlockDay="33" price="1000000" hpWeight="2.75" hpPriceWeight="2.75" />
+    <Avatar name="Mike" damageInitial="250" damageFinal="300" hpInitial="3500" hpFinal="4500" speedInitial="11" speedFinal="12" isCrystalBuy ="0" unlockDay="31" price="750000" hpWeight="2.2" hpPriceWeight="2.2" />
 
   </Avatars>
 	
