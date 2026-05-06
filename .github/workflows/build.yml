@@ -1,8 +1,5 @@
-name: Build Unity Android
-on: 
-  workflow_dispatch:
-  push:
-    branches: [ "main" ]
+name: Ultimate Android Build
+on: workflow_dispatch
 
 jobs:
   build:
@@ -11,19 +8,22 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+
+      - name: Force Personal License
+        uses: game-ci/unity-request-activation-file@v2.2.0
+        id: getManualLicenseFile
 
       - name: Build Project
         uses: game-ci/unity-builder@v4
         env:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          UNITY_SERIAL: "free" # Using the word 'free' sometimes bypasses the check
         with:
           targetPlatform: Android
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: COMZ-Android-Build
+          name: Game-APK
           path: build/Android
