@@ -17,10 +17,10 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: Android
-          # The last version to support legacy ParticleEmitter
           unityVersion: 2018.2.21f1
+          # This forces the builder to use a "pre-packaged" environment with the SDK inside
+          customImage: 'unityci/editor:ubuntu-2018.2.21f1-android-0'
           projectPath: .
-          # Allows the build to proceed despite version differences
           allowDirtyBuild: true
 
       - name: Upload APK
