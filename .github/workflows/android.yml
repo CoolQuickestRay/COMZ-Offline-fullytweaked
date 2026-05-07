@@ -5,28 +5,24 @@ jobs:
   build:
     name: Build for Android 🎮
     runs-on: ubuntu-latest
-    container:
-      image: unityci/editor:ubuntu-2018.2.21f1-android-0
     steps:
-      # Use v2 instead of v4 because it's compatible with older GLIBC
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Build Project
         uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          ANDROID_SDK_ROOT: /opt/android-sdk-linux
-          ANDROID_NDK_ROOT: /opt/android-sdk-linux/ndk-bundle
-          JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
         with:
           targetPlatform: Android
           unityVersion: 2018.2.21f1
-          allowDirtyBuild: true
+          # This is the "Magic" line: it tells the builder to use the 2018 environment
+          # even though the main server is modern.
+          customImage: 'unityci/editor:ubuntu-2018.2.21f1-android-0'
+          projectPath: .
 
-      # Use v2 for the same compatibility reasons
       - name: Upload APK
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: COMZ-Android-Build
           path: build/Android
