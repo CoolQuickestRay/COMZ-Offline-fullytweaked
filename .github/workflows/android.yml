@@ -12,16 +12,11 @@ jobs:
       - name: Build Project
         uses: game-ci/unity-builder@v4
         env:
+          # Connecting ALL the wires here
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
         with:
           targetPlatform: Android
-          # 2019 is the "sweet spot" for legacy builds on GitHub Actions
           unityVersion: 2019.4.40f1
-          # This forces it to ignore minor version mismatches
-          versioning: Semantic
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: COMZ-Android-Build
-          path: build/Android
