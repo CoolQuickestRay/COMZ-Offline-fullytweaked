@@ -16,14 +16,12 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          targetPlatform: Android
-          # This automatically detects the old Unity version from 2012
-          unityVersion: auto
-          # Skips extra steps to speed up the process
-          allowDirtyBuild: true
+          targetPlatform: Android 
+          unityVersion: 2017.4.40f1 
+          projectPath: . 
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: COMZ-Android-Build
+          name: COMZ-Legacy-Build
           path: build/Android
