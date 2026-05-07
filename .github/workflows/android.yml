@@ -13,13 +13,15 @@ jobs:
         uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          # These 3 lines are the "Manual Force" to fix the sdkmanager error
-          ANDROID_HOME: /opt/android-sdk-linux
+          # These lines "force-feed" the paths to Unity 2018
           ANDROID_SDK_ROOT: /opt/android-sdk-linux
-          CHROME_BIN: /usr/bin/google-chrome
+          ANDROID_HOME: /opt/android-sdk-linux
+          ANDROID_NDK_ROOT: /opt/android-sdk-linux/ndk-bundle
         with:
           targetPlatform: Android
           unityVersion: 2018.2.21f1
-          # This image is guaranteed to have the SDK at /opt/android-sdk-linux
-          customImage: 'unityci/editor:2018.2.21f1-android-0'
+          # This specific image is known to have the SDK at /opt/
+          customImage: 'unityci/editor:ubuntu-2018.2.21f1-android-0'
           projectPath: .
+          # This line tells the builder to use the paths we just defined
+          unityBuilderOptions: '-androidSdkRoot /opt/android-sdk-linux -androidNdkRoot /opt/android-sdk-linux/ndk-bundle'
