@@ -10,19 +10,21 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Project
-        uses: game-ci/unity-builder@v2
+        uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: Android
-          # This is the "Bridge" version that works on modern servers
-          unityVersion: 2017.4.40f1
+          # The last version to support legacy ParticleEmitter
+          unityVersion: 2018.2.21f1
           projectPath: .
+          # Allows the build to proceed despite version differences
+          allowDirtyBuild: true
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: COMZ-Custom-Build
+          name: COMZ-Android-Build
           path: build/Android
