@@ -4,7 +4,8 @@ on: workflow_dispatch
 jobs:
   build:
     name: Build for Android 🎮
-    runs-on: ubuntu-latest
+    # CHANGED: Using an older server version that supports Unity 5.6
+    runs-on: ubuntu-20.04 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -19,11 +20,8 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: Android
-          # This is the last version that supports both old & new particles
           unityVersion: 5.6.7f1
-          # This helps the old project find its files properly
           projectPath: .
-          # Ignores minor errors in ancient code to keep the build moving
           allowDirtyBuild: true
 
       - name: Upload APK
