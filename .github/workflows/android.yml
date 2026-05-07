@@ -5,6 +5,9 @@ jobs:
   build:
     name: Build for Android 🎮
     runs-on: ubuntu-latest
+    container:
+      # This specific image has Unity 2018 + Android SDK pre-installed and linked
+      image: unityci/editor:ubuntu-2018.2.21f1-android-0
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -13,14 +16,15 @@ jobs:
         uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          # Manually forcing the paths that Unity 2018 expects
+          ANDROID_SDK_ROOT: /opt/android-sdk-linux
+          ANDROID_NDK_ROOT: /opt/android-sdk-linux/ndk-bundle
+          JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64
         with:
           targetPlatform: Android
           unityVersion: 2018.2.21f1
-          # This forces the builder to use a "pre-packaged" environment with the SDK inside
-          customImage: 'unityci/editor:ubuntu-2018.2.21f1-android-0'
-          projectPath: .
+          # Tells the builder to use the container's pre-installed SDK
+          androidKeepNestSymbols: true
           allowDirtyBuild: true
 
       - name: Upload APK
