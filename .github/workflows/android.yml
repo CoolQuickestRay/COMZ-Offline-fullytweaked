@@ -17,8 +17,10 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           targetPlatform: Android
-          # This helps the builder find the old version info automatically
-          versioning: Semantic
+          # This automatically detects the old Unity version from 2012
+          unityVersion: auto
+          # Skips extra steps to speed up the process
+          allowDirtyBuild: true
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
