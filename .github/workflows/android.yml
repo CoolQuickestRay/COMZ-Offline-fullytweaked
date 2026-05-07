@@ -4,13 +4,10 @@ on: workflow_dispatch
 jobs:
   build:
     name: Build for Android 🎮
-    # CHANGED: Using an older server version that supports Unity 5.6
-    runs-on: ubuntu-20.04 
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Build Project
         uses: game-ci/unity-builder@v4
@@ -20,6 +17,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: Android
+          # Forcing the version here even on a new server
           unityVersion: 5.6.7f1
           projectPath: .
           allowDirtyBuild: true
@@ -27,5 +25,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: COMZ-Android-Build
+          name: COMZ-Custom-Build
           path: build/Android
